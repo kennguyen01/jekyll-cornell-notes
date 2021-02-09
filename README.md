@@ -1,2 +1,3 @@
-# jekyll-cornell-notes
-Cornell notes with Jekyll
+# Jekyll Cornell Notes
+
+Cornell Notes for Jekyll.

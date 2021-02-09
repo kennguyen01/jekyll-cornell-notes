@@ -1,0 +1,147 @@
+/* SEARCH DIRECTORY
+
+  1. =GLOBAL
+  2. =CONTAINER
+  3. =NAV
+  4. =IDEAS
+  5. =NOTES
+  6. =SUMMARY
+
+*/
+
+
+/* 
+===GLOBAL=== 
+*/
+
+
+
+/* 
+===CONTAINER=== 
+*/
+
+.outer-container {
+  margin: 0 auto;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  transition: 1s ease;
+}
+
+/* Expandable container */
+.inner-container {
+  margin: 0 auto;
+  height: 70vh;
+  display: flex;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  transition: 1s ease;
+}
+.inner-container-large {
+  height: 88vh;
+}
+
+/*
+===NAV===
+*/
+
+.book-nav {
+  height: 5vh;
+  margin-bottom: 10px;
+  border: 1px solid black;
+}
+
+
+/*
+===IDEAS===
+*/
+
+/* Idea collapsible button */
+.idea-btn {
+  position: absolute;
+  border: none;
+  width: 60px;
+  height: 30px;
+  border: 1px solid black;
+  box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, .3);
+  left: 100%;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transform: translateX(-50%);
+  transition: 0.3s ease;
+}
+.idea-btn:hover {
+  transform: scale(1.1) translateX(-50%);
+  border: 1px solid darkturquoise;
+  transition: 0.3s ease;
+  color: darkturquoise;
+  background-color: white;
+}
+
+/* Expandable idea area */
+.idea {
+  width: 20%;
+  height: 100%;
+  background-color: beige;
+  transition: 1s ease;
+  position: relative;
+}
+.idea-small {
+  width: 1%;
+}
+
+/*
+===NOTES=== 
+*/
+
+.note {
+  width: 80%;
+  height: 100%;
+  padding: 0 2em;
+  margin-bottom: 1em;
+  overflow: auto;
+  transition: 1s ease;
+  border: 1px solid black;
+  background-color: #ccc;
+}
+.note-large {
+  width: 99%;
+}
+
+/* 
+===SUMMARY=== 
+*/
+
+/* Summary collapsible button */
+.sum-btn {
+  position: absolute;
+  border: none;
+  width: 95px;
+  height: 30px;
+  left: 50%;
+  border: 1px solid black;
+  box-shadow: 0 1px 4px 2px rgba(0 ,0, 0, .3);
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+.sum-btn:hover {
+  transform: scale(1.1) translateY(-50%); 
+  border: 1px solid darkviolet;
+  transition: 0.3s ease;
+  color: darkviolet;
+  background-color: white;
+}
+
+/* Expandable summary area */
+.summary {
+  width: 100%;
+  height: 30vh;
+  overflow: auto;
+}
+.summary-small {
+  height: 1%;
+}

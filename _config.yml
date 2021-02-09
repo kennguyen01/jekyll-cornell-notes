@@ -1,0 +1,18 @@
+baseurl: /jekyll-cornell-notes
+
+markdown: kramdown
+kramdown:
+  syntax-highlighter: rouge
+highlighter: rouge
+
+include: ["_books"]
+
+collections:
+  books:
+    output: true
+  
+defaults:
+  - scope:
+      path: "_books"
+    values:
+      layout: book

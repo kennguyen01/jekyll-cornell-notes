@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ site.baseurl }}/styles/book.css" type="text/css">
+    <link rel="icon" href="#">
+    <title>{{ page.title }}</title>
+  </head>
+
+  <body>
+
+    <nav class="book-nav">
+
+    </nav>
+
+    <div class="outer-container">
+
+      <div class="inner-container">
+        
+        <div class="idea">
+          <button type="button" class="idea-btn">Ideas</button>
+        </div>
+    
+        <div class="note">
+          
+          {{ content }}
+    
+        </div>
+      </div>
+
+      <div class="summary">
+        <button type="button" class="sum-btn">Summary</button>
+      </div>
+    </div>
+
+    <script src="{{ site.baseurl }}/scripts/book.js"></script>
+  </body>
+</html>
