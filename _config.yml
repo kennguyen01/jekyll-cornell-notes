@@ -16,3 +16,5 @@ defaults:
       path: "_books"
     values:
       layout: book
+
+excerpt_summary: <!--summary-->

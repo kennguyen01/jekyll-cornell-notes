@@ -14,7 +14,9 @@
 ===GLOBAL=== 
 */
 
-
+.hide {
+  display: none;
+}
 
 /* 
 ===CONTAINER=== 
@@ -38,7 +40,7 @@
   transition: 1s ease;
 }
 .inner-container-large {
-  height: 88vh;
+  height: 89vh;
 }
 
 /*
@@ -56,57 +58,77 @@
 ===IDEAS===
 */
 
-/* Idea collapsible button */
-.idea-btn {
-  position: absolute;
-  border: none;
-  width: 60px;
-  height: 30px;
-  border: 1px solid black;
-  box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, .3);
-  left: 100%;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: bold;
-  transform: translateX(-50%);
-  transition: 0.3s ease;
-}
-.idea-btn:hover {
-  transform: scale(1.1) translateX(-50%);
-  border: 1px solid darkturquoise;
-  transition: 0.3s ease;
-  color: darkturquoise;
-  background-color: white;
-}
-
 /* Expandable idea area */
 .idea {
-  width: 20%;
+  padding: 0 1em;
+  width: 15%;
   height: 100%;
+  overflow-y: auto;
   background-color: beige;
   transition: 1s ease;
   position: relative;
 }
 .idea-small {
-  width: 1%;
+  padding: 0;
+  overflow: hidden;
+  width: 0;
+}
+
+/* Idea links */
+.idea a {
+  z-index: 0;
+  display: inline-block;
+  text-decoration: none;
+}
+.idea a:hover {
+  transform: scale(1.05);
+}
+.idea strong, .idea em {
+  padding-left: 1em;
 }
 
 /*
 ===NOTES=== 
 */
 
+/* Idea collapsible button
+
+Button is placed inside note area to 
+not get clipped by overflow from idea area
+*/
+.idea-btn {
+  position: absolute;
+  border: none;
+  width: 60px;
+  height: 30px;
+  border: 1px solid black;
+  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, .3);
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transform: translateX(-80%) translateY(-40%);
+  transition: 0.3s ease;
+}
+.idea-btn:hover {
+  transform: scale(1.1) translateX(-80%) translatey(-40%);
+  border: 1px solid darkturquoise;
+  transition: 0.3s ease;
+  color: darkturquoise;
+  background-color: white;
+}
+
+/* Expandable note area */
 .note {
-  width: 80%;
+  width: 85%;
   height: 100%;
   padding: 0 2em;
-  margin-bottom: 1em;
-  overflow: auto;
+  overflow-y: auto;
   transition: 1s ease;
   border: 1px solid black;
-  background-color: #ccc;
+  background-color: #f4f9f9;
 }
 .note-large {
-  width: 99%;
+  width: 100%;
 }
 
 /* 
@@ -121,7 +143,7 @@
   height: 30px;
   left: 50%;
   border: 1px solid black;
-  box-shadow: 0 1px 4px 2px rgba(0 ,0, 0, .3);
+  box-shadow: 0 1px 2px 1px rgba(0 ,0, 0, .3);
   transform: translateY(-50%);
   cursor: pointer;
   font-size: 18px;
@@ -140,8 +162,8 @@
 .summary {
   width: 100%;
   height: 30vh;
-  overflow: auto;
+  overflow-y: auto;
 }
 .summary-small {
-  height: 1%;
+  height: 0;
 }
