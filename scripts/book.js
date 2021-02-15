@@ -75,6 +75,28 @@ const ideaLinks = () => {
   }
 }
 
+/**
+ * Highlight text in note when user clicks on idea link
+ */
+const animateLink = () => {
+  let idea = document.querySelectorAll('.idea a');
+
+  idea.forEach(link => {
+    link.addEventListener('click', () => {
+      let id = link.href.split('#')[1];
+      let ele = document.querySelector(`#${id}`);
+
+      // Change background color
+      ele.animate([
+        // Keyframes
+        { background: '#f4f9f9' },
+        { background: 'yellow' },
+        { background: '#f4f9f9' }
+      ], 2000);
+    });
+  });
+}
+
 (function() {
   // Toggle collapsible areas
   ideaToggle();
@@ -83,7 +105,8 @@ const ideaLinks = () => {
   // Display blockquote in summary area
   writeSum();
 
-  // Display links in idea area
+  // Create idea links
   addId();
   ideaLinks();
+  animateLink();
 })();

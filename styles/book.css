@@ -47,12 +47,12 @@
 ===NAV===
 */
 
+/* Navigation grid */
 .book-nav {
   height: 5vh;
   margin-bottom: 10px;
   border: 1px solid black;
 }
-
 
 /*
 ===IDEAS===
@@ -79,9 +79,11 @@
   z-index: 0;
   display: inline-block;
   text-decoration: none;
+  color: black;
 }
 .idea a:hover {
   transform: scale(1.05);
+  color: blue;
 }
 .idea strong, .idea em {
   padding-left: 1em;
@@ -106,11 +108,11 @@ not get clipped by overflow from idea area
   cursor: pointer;
   font-size: 18px;
   font-weight: bold;
-  transform: translateX(-80%) translateY(-40%);
+  transform: translateX(-105%) translateY(-40%);
   transition: 0.3s ease;
 }
 .idea-btn:hover {
-  transform: scale(1.1) translateX(-80%) translatey(-40%);
+  transform: scale(1.1) translateX(-105%) translatey(-40%);
   border: 1px solid darkturquoise;
   transition: 0.3s ease;
   color: darkturquoise;
@@ -121,7 +123,7 @@ not get clipped by overflow from idea area
 .note {
   width: 85%;
   height: 100%;
-  padding: 0 2em;
+  padding: 0 3em;
   overflow-y: auto;
   transition: 1s ease;
   border: 1px solid black;
