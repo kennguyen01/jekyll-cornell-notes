@@ -1,19 +1,12 @@
 /* SEARCH DIRECTORY
 
-  1. =GLOBAL
-  2. =NAV
-  3. =CONTAINERS
-  4. =IDEAS
-  5. =NOTES
-  6. =SUMMARY
+  1. =NAV
+  2. =CONTAINERS
+  3. =IDEAS
+  4. =NOTES
+  5. =SUMMARY
 
 */
-
-
-/* 
-===GLOBAL=== 
-*/
-
 
 
 /*
@@ -39,7 +32,7 @@ nav a {
   font-size: 20px;
   border: 1px solid black;
   background-color: transparent;
-  transition: 0.7s ease;
+  transition: 0.5s ease;
   color: black;
 }
 .home:hover {
@@ -56,7 +49,7 @@ nav a {
   flex-wrap: wrap;
 }
 .nav-links h1 {
-  font-size: 25px;
+  font-size: 26px;
   margin-top: 0;
 }
 .nav-links a {
@@ -72,30 +65,33 @@ nav a {
   text-decoration: underline;
 }
 
+
 /* 
 ===CONTAINERS=== 
 */
 
+/* Container for inner and summary */
 .outer-container {
   margin: 0 auto;
   height: 90vh;
   display: flex;
   flex-direction: column;
   border: 2px solid rgba(0, 0, 0, 0.5);
-  transition: 1s ease;
+  transition: 0.7s ease;
 }
 
-/* Expandable container */
+/* Container fo note and idea */
 .inner-container {
   margin: 0 auto;
   height: 70vh;
   display: flex;
   border: 2px solid rgba(0, 0, 0, 0.5);
-  transition: 1s ease;
+  transition: 0.7s ease;
 }
 .inner-container-large {
   height: 89vh;
 }
+
 
 /*
 ===IDEAS===
@@ -108,7 +104,7 @@ nav a {
   height: 100%;
   overflow-y: auto;
   background-color: beige;
-  transition: 1s ease;
+  transition: 0.7s ease;
   position: relative;
 }
 .idea-small {
@@ -121,16 +117,19 @@ nav a {
 .idea a {
   display: inline-block;
   text-decoration: none;
-  color: black;
+  color: #00008B;
+  opacity: 0.9;
 }
 .idea a:hover {
-  color: blue;
+  color: #00008B;
+  opacity: 1;
   transform: scale(1.05);
   text-decoration: underline;
 }
 .idea strong, .idea em {
   padding-left: 1em;
 }
+
 
 /*
 ===NOTES=== 
@@ -152,13 +151,13 @@ not get clipped by overflow from idea area
   font-size: 18px;
   font-weight: bold;
   transform: translateX(-105%) translateY(-40%);
-  transition: 0.7s ease;
+  transition: 0.5s ease;
 }
 .idea-btn:hover {
   border: 1px solid white;
   transition: 0.5s ease;
   color: white;
-  background-color: #1E90FF;
+  background-color: #4169E1;
 }
 
 /* Expandable note area */
@@ -174,6 +173,7 @@ not get clipped by overflow from idea area
 .note-large {
   width: 100%;
 }
+
 
 /* 
 ===SUMMARY=== 
@@ -192,13 +192,13 @@ not get clipped by overflow from idea area
   cursor: pointer;
   font-size: 18px;
   font-weight: bold;
-  transition: 0.7s ease;
+  transition: 0.5s ease;
 }
 .sum-btn:hover {
   border: 1px solid white;
   transition: 0.5s ease;
   color: white;
-  background-color: #9932CC;
+  background-color: #228B22;
 }
 
 /* Expandable summary area */

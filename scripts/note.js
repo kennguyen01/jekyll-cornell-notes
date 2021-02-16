@@ -94,7 +94,7 @@ const ideaLinks = () => {
 /**
  * Highlight text in note when user clicks on idea link
  */
-const animateLink = () => {
+const animateLinks = () => {
   let idea = document.querySelectorAll('.idea a');
 
   idea.forEach(link => {
@@ -127,5 +127,5 @@ const animateLink = () => {
   // Create idea links
   addId();
   ideaLinks();
-  animateLink();
+  animateLinks();
 })();
