@@ -1,7 +1,10 @@
 ---
-layout: book
-title: Example Book
+layout: note
+title: Note 1
 ---
+
+[Note 2](note-2.html)
+[Note 3](note-3.html)
 
 > Donec risus mi, finibus ut condimentum a, eleifend vitae ligula. Phasellus interdum elit ut augue cursus, eu tincidunt felis commodo. Nunc luctus lobortis ligula nec bibendum. Quisque congue quis lacus a vehicula. Duis bibendum egestas viverra. Ut nec blandit purus. Praesent sit amet quam sit amet nulla facilisis interdum. Donec posuere urna sed neque fermentum, ut pharetra metus tincidunt. Nullam condimentum lacus vitae tellus pulvinar, vel molestie arcu placerat.
 >

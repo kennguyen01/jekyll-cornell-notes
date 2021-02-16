@@ -27,12 +27,28 @@ const sumToggle = () => {
 };
 
 /**
+ * Move external links from note to nav
+ */
+const moveLinks = () => {
+  let links = document.querySelectorAll('.note a');
+  if (links) {
+    let navBar = document.querySelector('.nav-links');
+
+    for (let i = 0; i < links.length; i++) {
+      navBar.appendChild(links[i]);
+    }
+  }
+}
+
+/**
  * Move blockquote from note to summary
  */
-const writeSum = () => {
+const moveSum = () => {
   let block = document.querySelector('blockquote');
-  let sum = document.querySelector('.summary');
-  sum.appendChild(block);
+  if (block) {
+    let sum = document.querySelector('.summary');
+    sum.appendChild(block);
+  }
 };
 
 /**
@@ -102,8 +118,11 @@ const animateLink = () => {
   ideaToggle();
   sumToggle();
 
-  // Display blockquote in summary area
-  writeSum();
+  // Move external links to nav
+  moveLinks();
+
+  // Move blockquote to summary area
+  moveSum();
 
   // Create idea links
   addId();

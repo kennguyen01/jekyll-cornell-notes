@@ -1,8 +1,8 @@
 /* SEARCH DIRECTORY
 
   1. =GLOBAL
-  2. =CONTAINER
-  3. =NAV
+  2. =NAV
+  3. =CONTAINERS
   4. =IDEAS
   5. =NOTES
   6. =SUMMARY
@@ -14,12 +14,66 @@
 ===GLOBAL=== 
 */
 
-.hide {
-  display: none;
+
+
+/*
+===NAV===
+*/
+
+/* Nav grid */
+nav {
+  position: sticky;
+  height: 40px;
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+  margin-bottom: 1em;
+}
+nav a {
+  justify-self: center;
+}
+
+/* Nav buttons */
+.home {
+  width: 100px;
+  height: 30px;
+  font-size: 20px;
+  border: 1px solid black;
+  background-color: transparent;
+  transition: 0.7s ease;
+  color: black;
+}
+.home:hover {
+  cursor: pointer;
+  border: none;
+  background-color: black;
+  transition: 0.5s ease;
+  color: white;
+}
+
+/* Link to other notes */
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+.nav-links h1 {
+  font-size: 25px;
+  margin-top: 0;
+}
+.nav-links a {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0000CD;
+  text-decoration: none;
+  margin-left: 1em;
+}
+.nav-links a:hover {
+  transform: scale(1.05);
+  opacity: 1;
+  text-decoration: underline;
 }
 
 /* 
-===CONTAINER=== 
+===CONTAINERS=== 
 */
 
 .outer-container {
@@ -44,17 +98,6 @@
 }
 
 /*
-===NAV===
-*/
-
-/* Navigation grid */
-.book-nav {
-  height: 5vh;
-  margin-bottom: 10px;
-  border: 1px solid black;
-}
-
-/*
 ===IDEAS===
 */
 
@@ -76,14 +119,14 @@
 
 /* Idea links */
 .idea a {
-  z-index: 0;
   display: inline-block;
   text-decoration: none;
   color: black;
 }
 .idea a:hover {
-  transform: scale(1.05);
   color: blue;
+  transform: scale(1.05);
+  text-decoration: underline;
 }
 .idea strong, .idea em {
   padding-left: 1em;
@@ -109,14 +152,13 @@ not get clipped by overflow from idea area
   font-size: 18px;
   font-weight: bold;
   transform: translateX(-105%) translateY(-40%);
-  transition: 0.3s ease;
+  transition: 0.7s ease;
 }
 .idea-btn:hover {
-  transform: scale(1.1) translateX(-105%) translatey(-40%);
-  border: 1px solid darkturquoise;
-  transition: 0.3s ease;
-  color: darkturquoise;
-  background-color: white;
+  border: 1px solid white;
+  transition: 0.5s ease;
+  color: white;
+  background-color: #1E90FF;
 }
 
 /* Expandable note area */
@@ -150,20 +192,19 @@ not get clipped by overflow from idea area
   cursor: pointer;
   font-size: 18px;
   font-weight: bold;
-  transition: 0.3s ease;
+  transition: 0.7s ease;
 }
 .sum-btn:hover {
-  transform: scale(1.1) translateY(-50%); 
-  border: 1px solid darkviolet;
-  transition: 0.3s ease;
-  color: darkviolet;
-  background-color: white;
+  border: 1px solid white;
+  transition: 0.5s ease;
+  color: white;
+  background-color: #9932CC;
 }
 
 /* Expandable summary area */
 .summary {
   width: 100%;
-  height: 30vh;
+  height: 20vh;
   overflow-y: auto;
 }
 .summary-small {

@@ -5,16 +5,14 @@ kramdown:
   syntax-highlighter: rouge
 highlighter: rouge
 
-include: ["_books"]
+include: ["_notes"]
 
 collections:
-  books:
+  notes:
     output: true
   
 defaults:
   - scope:
-      path: "_books"
+      path: "_notes"
     values:
-      layout: book
-
-excerpt_summary: <!--summary-->
+      layout: note
