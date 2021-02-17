@@ -22,13 +22,13 @@ const getNames = () => {
  * 
  * @param {Array} names 
  */
-const buildSections = (names) => {
+const buildFieldsets = (names) => {
   let div = document.querySelector('.container');
 
   for (let i = 0; i < names.length; i++) {
-    let sec = document.createElement('section');
-    sec.setAttribute('data-name', `${names[i]}`);
-    div.appendChild(sec);
+    let field = document.createElement('fieldset');
+    field.setAttribute('data-name', `${names[i]}`);
+    div.appendChild(field);
   }
 }
 
@@ -61,20 +61,20 @@ const writeTitle = (str) => {
 }
 
 /**
- * Add header to each section
+ * Write directory name as legend to fieldset
  */
-const writeHeader = () => {
-  let secs = document.querySelectorAll('section');
+const writeLegends = () => {
+  let fields = document.querySelectorAll('fieldset');
   
-  for (let i = 0; i < secs.length; i++) {
-    let sec = secs[i];
+  for (let i = 0; i < fields.length; i++) {
+    let field = fields[i];
 
-    let name = sec.getAttribute('data-name');
+    let name = field.getAttribute('data-name');
     name = writeTitle(name);
     
-    let header = document.createElement('h2');
-    header.textContent = name;
-    sec.appendChild(header);
+    let legend = document.createElement('legend');
+    legend.textContent = name;
+    field.appendChild(legend);
   }
 }
 
@@ -88,10 +88,12 @@ const groupLinks = (names) => {
     // Convert NodeList to Array
     let elems = Array.from(document.querySelectorAll(`[data-name='${names[i]}']`));
 
+    // Last array item is fieldset
+    let field = elems.pop();
+
     // Add links to section
-    let sec = elems.pop();
     for (let j = 0; j < elems.length; j++) {
-      sec.appendChild(elems[j]);
+      field.appendChild(elems[j]);
     }
   }
 }
@@ -99,7 +101,7 @@ const groupLinks = (names) => {
 (function() {
   // Group all links under their directory section
   let dataNames = getNames();
-  buildSections(dataNames);
-  writeHeader();
+  buildFieldsets(dataNames);
+  writeLegends();
   groupLinks(dataNames);
 })();

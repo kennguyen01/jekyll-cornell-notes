@@ -1,10 +1,13 @@
 ---
 layout: note
-title: Note 2
+title: Donec eget lectus quis
 ---
 
-[Note 1](note-1.html)
-[Note 3](note-3.html)
+[Lorem ipsum dolor sit amet](donec-eget-lectus-quis.html)
+[Cras vulputate et enim eu egestas](cras-vulputate-et-enim-eu-egestas.html)
+[Maecenas diam dolor](maecenas-diam-dolor.html)
+[Nulla id massa nec diam](nulla-id-massa-nec-diam.html)
+[Phasellus sit amet dignissim sem](phasellus-sit-amet-dignissim-sem.html)
 
 > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra elit ac ante sollicitudin, quis faucibus risus eleifend. Etiam consequat efficitur urna sed mattis. Vivamus fringilla risus sit amet turpis interdum malesuada. Donec orci augue, dapibus a egestas eu, rhoncus at neque. Nulla eget sodales ipsum, gravida consectetur nulla. Maecenas porta tortor at vulputate feugiat. Suspendisse finibus iaculis tincidunt. Suspendisse potenti.
 

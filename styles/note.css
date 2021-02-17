@@ -8,6 +8,13 @@
 
 */
 
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+}
 
 /*
 ===NAV===
@@ -15,14 +22,14 @@
 
 /* Nav grid */
 nav {
-  position: sticky;
-  height: 40px;
   display: grid;
-  grid-template-columns: 2fr 8fr;
-  margin-bottom: 1em;
+  grid-template-rows: 9fr 1fr;
+  background-color: #383e56;
+  padding: 10px;
 }
-nav a {
-  justify-self: center;
+nav h1 {
+  font-size: 20px;
+  color: white;
 }
 
 /* Nav buttons */
@@ -30,38 +37,34 @@ nav a {
   width: 100px;
   height: 30px;
   font-size: 20px;
-  border: 1px solid black;
+  border: 1px solid white;
   background-color: transparent;
   transition: 0.5s ease;
-  color: black;
+  color: white;
 }
 .home:hover {
   cursor: pointer;
   border: none;
-  background-color: black;
+  background-color: white;
   transition: 0.5s ease;
-  color: white;
+  color: black;
 }
 
 /* Link to other notes */
 .nav-links {
   display: flex;
-  flex-wrap: wrap;
-}
-.nav-links h1 {
-  font-size: 26px;
-  margin-top: 0;
+  flex-direction: column;
+  gap: 1em;
+  overflow-y: auto;
 }
 .nav-links a {
   font-size: 18px;
   font-weight: bold;
-  color: #0000CD;
+  color: #a3d8f4;
   text-decoration: none;
-  margin-left: 1em;
 }
 .nav-links a:hover {
-  transform: scale(1.05);
-  opacity: 1;
+  transform: scale(1.03);
   text-decoration: underline;
 }
 
@@ -72,8 +75,8 @@ nav a {
 
 /* Container for inner and summary */
 .outer-container {
-  margin: 0 auto;
-  height: 90vh;
+  margin: 0.5em;
+  height: 97vh;
   display: flex;
   flex-direction: column;
   border: 2px solid rgba(0, 0, 0, 0.5);
@@ -89,7 +92,7 @@ nav a {
   transition: 0.7s ease;
 }
 .inner-container-large {
-  height: 89vh;
+  height: 95vh;
 }
 
 
@@ -123,7 +126,7 @@ nav a {
 .idea a:hover {
   color: #00008B;
   opacity: 1;
-  transform: scale(1.05);
+  transform: scale(1.03);
   text-decoration: underline;
 }
 .idea strong, .idea em {

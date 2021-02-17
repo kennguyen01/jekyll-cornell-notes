@@ -1,7 +1,8 @@
 /* SEARCH DIRECTORY
 
   1. =GLOBAL
-  2. =SECTIONS
+  2. =CONTAINER
+  3. =FIELDSETS
 
 */
 
@@ -16,6 +17,37 @@ a {
 
 
 /*
-===SECTIONS===
+===CONTAINER===
+*/
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1em;
+}
+
+
+/*
+===FIELDSETS===
 */
 
+fieldset {
+  max-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow-y: auto;
+  gap: 1em;
+}
+legend {
+  font-size: 20px;
+  font-weight: bold;
+}
+fieldset a {
+  text-decoration: none;
+  color: #0000FF;
+}
+fieldset a:hover {
+  transform: scale(1.03);
+  text-decoration: underline;
+}
