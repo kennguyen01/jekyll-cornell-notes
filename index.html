@@ -5,6 +5,9 @@ title: Jekyll Cornell Notes
 
 <h1>Jekyll Cornell Notes</h1>
 
-{% for note in site.notes %}
-  <a href="{{ site.baseurl }}{{ note.url }}">{{ note.title }}</a>
-{% endfor %}
+<div class="container">
+  {% for note in site.notes %}
+    {% assign url = note.url | split: "/" %}
+    <a href="{{ site.baseurl }}{{ note.url }}" data-name="{{ url[2] }}">{{ note.title }}</a>
+  {% endfor %}
+</div>
