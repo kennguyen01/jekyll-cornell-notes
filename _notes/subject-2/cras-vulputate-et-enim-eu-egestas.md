@@ -3,7 +3,7 @@ layout: note
 title: Cras vulputate et enim eu egestas
 ---
 
-[Lorem ipsum dolor sit amet](donec-eget-lectus-quis.html)
+[Lorem ipsum dolor sit amet](lorem-ipsum-dolor-sit-amet.html)
 [Donec eget lectus quis](donec-eget-lectus-quis.html)
 [Maecenas diam dolor](maecenas-diam-dolor.html)
 [Nulla id massa nec diam](nulla-id-massa-nec-diam.html)

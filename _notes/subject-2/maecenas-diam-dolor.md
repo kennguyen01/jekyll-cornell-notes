@@ -3,7 +3,7 @@ layout: note
 title: Maecenas diam dolor
 ---
 
-[Lorem ipsum dolor sit amet](donec-eget-lectus-quis.html)
+[Lorem ipsum dolor sit amet](lorem-ipsum-dolor-sit-amet.html)
 [Donec eget lectus quis](donec-eget-lectus-quis.html)
 [Cras vulputate et enim eu egestas](cras-vulputate-et-enim-eu-egestas.html)
 [Nulla id massa nec diam](nulla-id-massa-nec-diam.html)

@@ -11,10 +11,9 @@
 ===GLOBAL===
 */
 
-a {
-  margin: 0 1em;
+h1 {
+  text-align: center;
 }
-
 
 /*
 ===CONTAINER===
@@ -40,12 +39,13 @@ fieldset {
   gap: 1em;
 }
 legend {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
 }
 fieldset a {
   text-decoration: none;
   color: #0000FF;
+  font-size: 16px;
 }
 fieldset a:hover {
   transform: scale(1.03);

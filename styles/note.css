@@ -9,8 +9,8 @@
 */
 
 body {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 9fr;
@@ -23,17 +23,16 @@ body {
 /* Nav grid */
 nav {
   display: grid;
-  grid-template-rows: 9fr 1fr;
+  grid-template-rows: auto 50px;
   background-color: #383e56;
-  padding: 10px;
-}
-nav h1 {
-  font-size: 20px;
-  color: white;
 }
 
 /* Nav buttons */
+nav a {
+  justify-self: center;
+}
 .home {
+  justify-self: center;
   width: 100px;
   height: 30px;
   font-size: 20px;
@@ -54,11 +53,16 @@ nav h1 {
 .nav-links {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 0.5em;
   overflow-y: auto;
+  padding-left: 10px;
+}
+.nav-links h1 {
+  font-size: 20px;
+  color: white;
 }
 .nav-links a {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   color: #a3d8f4;
   text-decoration: none;
@@ -75,24 +79,25 @@ nav h1 {
 
 /* Container for inner and summary */
 .outer-container {
-  margin: 0.5em;
   height: 97vh;
+  margin: 0.5em;
   display: flex;
   flex-direction: column;
   border: 2px solid rgba(0, 0, 0, 0.5);
   transition: 0.7s ease;
 }
 
-/* Container fo note and idea */
+/* Container for note and idea */
 .inner-container {
   margin: 0 auto;
-  height: 70vh;
+  height: 80vh;
   display: flex;
   border: 2px solid rgba(0, 0, 0, 0.5);
   transition: 0.7s ease;
 }
 .inner-container-large {
-  height: 95vh;
+  height: 96vh;
+  transition: 0.7s ease;
 }
 
 
@@ -114,6 +119,7 @@ nav h1 {
   padding: 0;
   overflow: hidden;
   width: 0;
+  transition: 0.7s ease;
 }
 
 /* Idea links */
@@ -153,7 +159,7 @@ not get clipped by overflow from idea area
   cursor: pointer;
   font-size: 18px;
   font-weight: bold;
-  transform: translateX(-105%) translateY(-40%);
+  transform: translateX(-100%) translateY(-40%);
   transition: 0.5s ease;
 }
 .idea-btn:hover {
@@ -169,12 +175,13 @@ not get clipped by overflow from idea area
   height: 100%;
   padding: 0 3em;
   overflow-y: auto;
-  transition: 1s ease;
+  transition: 0.7s ease;
   border: 1px solid black;
   background-color: #f4f9f9;
 }
 .note-large {
   width: 100%;
+  transition: 0.7s ease;
 }
 
 
@@ -209,7 +216,9 @@ not get clipped by overflow from idea area
   width: 100%;
   height: 20vh;
   overflow-y: auto;
+  transition: 0.7s ease;
 }
 .summary-small {
-  height: 0;
+  height: 1vh;
+  transition: 0.7s ease;
 }
