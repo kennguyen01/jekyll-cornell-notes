@@ -89,8 +89,9 @@ nav a {
 
 /* Container for note and idea */
 .inner-container {
-  margin: 0 auto;
+  width: 100%;
   height: 80vh;
+  margin: 0 auto;
   display: flex;
   border: 2px solid rgba(0, 0, 0, 0.5);
   transition: 0.7s ease;
