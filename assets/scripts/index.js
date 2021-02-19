@@ -61,7 +61,7 @@ const writeTitle = (str) => {
 }
 
 /**
- * Write directory name as legend to fieldset
+ * Write directory name as legend of fieldset
  */
 const writeLegends = () => {
   let fields = document.querySelectorAll('fieldset');
@@ -71,7 +71,7 @@ const writeLegends = () => {
 
     let name = field.getAttribute('data-name');
     name = writeTitle(name);
-    
+
     let legend = document.createElement('legend');
     legend.textContent = name;
     field.appendChild(legend);
@@ -99,7 +99,7 @@ const groupLinks = (names) => {
 }
 
 (function() {
-  // Group all links under their directory section
+  // Group all links under fieldsets for each directory
   let dataNames = getNames();
   buildFieldsets(dataNames);
   writeLegends();

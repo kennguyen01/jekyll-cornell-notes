@@ -61,6 +61,15 @@ fieldset {
   box-shadow: 2px 2px 3px black;
 }
 legend {
-  font-size: 18px;
+  max-width: 20vw;
+  font-size: 20px;
   font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+legend:hover {
+  overflow: visible;
+  white-space: normal;
+  height: auto;
 }
