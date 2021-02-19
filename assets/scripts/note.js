@@ -84,9 +84,12 @@ const ideaLinks = () => {
     let link = document.createElement('a');
 
     link.href = `#${idea.id}`;
-    link.innerText = idea.textContent;
-
+    
     outerTag.appendChild(link);
+    link.innerText = idea.textContent;
+    if (outerTag.tagName == 'STRONG' || outerTag.tagName == 'EM') {
+      link.innerText = '- ' + link.innerText;
+    }
     ideaArea.appendChild(outerTag);
   }
 }
