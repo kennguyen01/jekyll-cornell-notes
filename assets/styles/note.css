@@ -137,6 +137,7 @@ nav a {
   text-decoration: underline;
 }
 .idea strong, .idea em {
+  display: block;
   padding-left: 1em;
 }
 
