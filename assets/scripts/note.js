@@ -90,10 +90,6 @@ const ideaLinks = () => {
     // Add dash before strong/em links
     if (outerTag.tagName == 'STRONG' || outerTag.tagName == 'EM') {
       link.innerText = '- ' + link.innerText;
-    } else {
-      // Add forward slashes before headers
-      let num = +(outerTag.tagName[1]);
-      link.innerText = '/'.repeat(num) + ' ' + link.innerText;
     }
     ideaArea.appendChild(outerTag);
   }
