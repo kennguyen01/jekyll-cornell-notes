@@ -1,0 +1,6 @@
+{% for doc in site.pages %}
+  {% if doc.tag == include.tag %}
+    {{ doc.url | split: "/" | last }}
+    {{ doc.title }}
+  {% endif %}
+{% endfor %}

@@ -26,20 +26,27 @@ To make a new subject, create a directory with the subject name in the `_notes` 
 
 ### Note Format
 
-For each note, create a markdown file such as `subject-note-1.md`. At the top of each markdown file, include:
+#### Front Matter
+
+For each note, create a markdown file such as `subject-note-1.md`. At the top of each markdown file, use the front matter below:
 
 ```
 ---
 layout: note
 title: Subject Note 1
+tag: Subject
 ---
 ```
 
-To link to other notes within the same directory, use relative links with the names of the generated HTML file:
+#### Note Links
+
+To link to other notes of the same `tag`  within the same directory, use the `include` tag:
 
 ```
-[Link to Another Note](link-to-another-note.html)
+{% include links.html tag=page.tag %}
 ```
+
+#### Summary 
 
 Blockquotes in the markdown file will be moved to the `Summary` section at the bottom. Add the `>` symbol in front of the text to denote them as summarization:
 
@@ -48,6 +55,8 @@ Blockquotes in the markdown file will be moved to the `Summary` section at the b
 > 
 > Summary paragraph 2
 ```
+
+#### Ideas
 
 All `headers`, `<strong>`, and `<em>` tags will be extracted from the notes and linked to in the `Ideas` column. It is recommended to use different names for the ideas to avoid overlapping anchor links.
 

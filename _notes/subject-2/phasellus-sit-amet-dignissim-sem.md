@@ -1,13 +1,10 @@
 ---
 layout: note
 title: Phasellus sit amet dignissim sem
+tag: Subject 2
 ---
 
-[Lorem ipsum dolor sit amet](lorem-ipsum-dolor-sit-amet.html)
-[Donec eget lectus quis](donec-eget-lectus-quis.html)
-[Cras vulputate et enim eu egestas](cras-vulputate-et-enim-eu-egestas.html)
-[Maecenas diam dolor](maecenas-diam-dolor.html)
-[Nulla id massa nec diam](nulla-id-massa-nec-diam.html)
+{% include links.html tag=page.tag %}
 
 > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra elit ac ante sollicitudin, quis faucibus risus eleifend. Etiam consequat efficitur urna sed mattis. Vivamus fringilla risus sit amet turpis interdum malesuada. Donec orci augue, dapibus a egestas eu, rhoncus at neque. Nulla eget sodales ipsum, gravida consectetur nulla. Maecenas porta tortor at vulputate feugiat. Suspendisse finibus iaculis tincidunt. Suspendisse potenti.
 

@@ -15,6 +15,9 @@ body {
   display: grid;
   grid-template-columns: 1fr 8fr;
 }
+.hide {
+  display: none;
+}
 
 /*
 ===NAV===

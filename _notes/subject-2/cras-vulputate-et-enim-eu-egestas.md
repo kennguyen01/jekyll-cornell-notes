@@ -1,13 +1,10 @@
 ---
 layout: note
 title: Cras vulputate et enim eu egestas
+tag: Subject 2
 ---
 
-[Lorem ipsum dolor sit amet](lorem-ipsum-dolor-sit-amet.html)
-[Donec eget lectus quis](donec-eget-lectus-quis.html)
-[Maecenas diam dolor](maecenas-diam-dolor.html)
-[Nulla id massa nec diam](nulla-id-massa-nec-diam.html)
-[Phasellus sit amet dignissim sem](phasellus-sit-amet-dignissim-sem.html)
+{% include links.html tag=page.tag %}
 
 > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi elementum erat elementum vulputate imperdiet. Quisque tempus accumsan mauris, id vestibulum lectus tincidunt sit amet. Aliquam erat volutpat. Integer nisl orci, ultrices a leo quis, elementum dignissim justo. Sed sapien tortor, eleifend quis pellentesque sed, porttitor sed ante. Mauris cursus erat quis placerat viverra. Curabitur ut vehicula sem, in euismod enim. Aenean aliquet, mauris eu blandit feugiat, mauris ante rutrum mauris, eget dignissim augue lorem sed elit. Integer auctor imperdiet dapibus. Phasellus viverra sem odio, id consequat turpis placerat at.
 

@@ -27,16 +27,48 @@ const sumToggle = () => {
 };
 
 /**
- * Move external links from note to nav
+ * Generate external links in nav
  */
-const moveLinks = () => {
-  let links = document.querySelectorAll('.note a');
-  if (links) {
-    let navBar = document.querySelector('.nav-links');
+ const moveLinks = () => {
 
-    for (let i = 0; i < links.length; i++) {
-      navBar.appendChild(links[i]);
+  // Return array of link attributes
+  function getAttr(codeEle) {  
+    let codeArr = codeEle.textContent.split('\n');
+    let attr = [];
+    for (let i = 0; i < codeArr.length; i++) {
+
+      // Remove whitespace to make empty array item false
+      let item = codeArr[i].trim();
+
+      if (item) {
+        attr.push(item);
+      }
     }
+    return attr;
+  }
+
+  let navBar = document.querySelector('.nav-links');
+  let code = document.querySelector('code');
+
+  code.classList.add('hide');
+
+  // Only move the code element
+  // Empty highlight div still in note
+  navBar.appendChild(code);
+
+  // Generate external links from code attributes
+  let linksAttr = getAttr(code);
+  for (let i = 0; i < linksAttr.length - 1; i += 2) {
+
+    // Even ele is href, odd ele is title
+    let href = linksAttr[i];
+    let title = linksAttr[i + 1];
+    
+    let link = document.createElement('a');
+    link.setAttribute('href', href);
+    link.innerText = title;
+
+    navBar.appendChild(link);
   }
 }
 

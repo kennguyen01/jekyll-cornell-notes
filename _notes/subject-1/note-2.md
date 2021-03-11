@@ -1,10 +1,10 @@
 ---
 layout: note
 title: Note 2
+tag: Subject 1
 ---
 
-[Note 1](note-1.html)
-[Note 3](note-3.html)
+{% include links.html tag=page.tag %}
 
 > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra elit ac ante sollicitudin, quis faucibus risus eleifend. Etiam consequat efficitur urna sed mattis. Vivamus fringilla risus sit amet turpis interdum malesuada. Donec orci augue, dapibus a egestas eu, rhoncus at neque. Nulla eget sodales ipsum, gravida consectetur nulla. Maecenas porta tortor at vulputate feugiat. Suspendisse finibus iaculis tincidunt. Suspendisse potenti.
 
